@@ -10,15 +10,32 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            position: relative;
         }
         header {
             background: #333;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
         .container {
             padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .profile-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            opacity: 0.3; /* Adjust opacity for visibility */
+        }
+        .profile-container img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin: 1rem;
         }
         section {
             margin-bottom: 2rem;
@@ -34,20 +51,16 @@
         .contact-info li {
             margin-bottom: 0.5rem;
         }
-        .profile-pic {
-            max-width: 150px;
-            margin: 0 auto;
-            display: block;
-            border-radius: 50%;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>Asif Iqbal Palash</h1>
         <p>Technical Manager</p>
-        <img src="profile.jpg" alt="Asif Iqbal Palash" class="profile-pic">
     </header>
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Asif Iqbal Palash">
+    </div>
     <div class="container">
         <section>
             <h2>Contact Information</h2>
